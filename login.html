@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>
+          <a href="#"> Home </a>
+        </li>
+        <li>
+          <a href="login.html"> Login </a>
+        </li>
+        <li>
+          <a href="register.html"> Register </a>
+        </li>
+        <li>
+          <a href="note.html"> Notes </a>
+        </li>
+      </ul>
+    </nav>
+
+    <h2>Login Form</h2>
+    <form action="#" onsubmit="navigate();return false">
+      <hr />
+      <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" name="uname" required />
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" name="psw" required />
+        <div class="name_container">
+        <button type="submit" class="loginbtn" style="width:50%">Login</button>
+        <div style="width:10%"></div>
+        <a href="./register.html" style="width:50%"><button id="signup">SignUp</button></a>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>
