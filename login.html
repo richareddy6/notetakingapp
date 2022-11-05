@@ -3,6 +3,9 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="style.css" />
+    
+    <script src="validate.js">
+    </script>
   </head>
   <body>
     <nav>
@@ -23,14 +26,14 @@
     </nav>
 
     <h2>Login Form</h2>
-    <form action="#" onsubmit="navigate();return false">
+    <form action="#" onsubmit="getLoginData();return false" > 
       <hr />
       <div class="container">
         <label for="uname"><b>Username</b></label>
-        <input type="text" name="uname" required />
+        <input type="text" name="uname" id="username" required />
 
         <label for="psw"><b>Password</b></label>
-        <input type="password" name="psw" required />
+        <input type="password" name="psw" id="password" required />
         <div class="name_container">
         <button type="submit" class="loginbtn" style="width:50%">Login</button>
         <div style="width:10%"></div>
