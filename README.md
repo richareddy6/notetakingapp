@@ -28,7 +28,7 @@ The note page has only 1 field which takes the note from the user
 1. Note
 
 ## ER Diagram
-![ER diagram missing](/public/Images/ER diagram.png "ER DIAGRAM")
+![ER diagram missing](/public/Images/ERdiagram.png "ER DIAGRAM")
 
 
 
