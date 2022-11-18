@@ -29,7 +29,7 @@ The note page has only 1 field which takes the note from the user
 
 ## ER Diagram
 
-![ER diagram missing](/public/Images/d.png)
+![ER diagram missing](/public/Images/Screenshot(34).png)
 
 
 
