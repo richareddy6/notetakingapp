@@ -1,0 +1,26 @@
+{
+  "name": "notetakingapp-main",
+  "version": "1.0.0",
+  "description": "This is a note taking web application where the user who have registered can login and write a note.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/richareddy6/notetakingapp.git"
+  },
+  "author": "Richa Reddy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/richareddy6/notetakingapp/issues"
+  },
+  "homepage": "https://github.com/richareddy6/notetakingapp#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
