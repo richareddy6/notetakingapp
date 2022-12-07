@@ -40,7 +40,7 @@ async function getAllNotes() {
 
 // Read Note
 async function Read(note) { //content:"hello world"
-  let cNote = await getnote(note); 
+  let cNote = await getNote(note); 
   if(!cNote[0]) throw Error("NoteID not found");
   return cNote[0];
 }
@@ -72,7 +72,7 @@ async function getNote(note) {
   if(note.userID) {
     sql = `
       SELECT * FROM notes
-       WHERE userID = ${note.user_id}
+       WHERE userID = "${note.user_id}"
     `
   } else {
     sql = `
@@ -83,4 +83,4 @@ async function getNote(note) {
   return await con.query(sql);  
 }
 
-module.exports = { getAllNotes, Read, editNotes, deleteNote};
+module.exports = { getAllNotes,getNote, Read, editNotes, deleteNote};
