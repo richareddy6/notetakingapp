@@ -29,10 +29,10 @@ body {
   width: 100%;
   opacity: 0.9;
 }
-.unlist li {
+li {
   display: inline;
 }
-.unlist {
+ul {
   word-spacing: 50px;
   padding: 10px;
   background-image: linear-gradient(to right, #67afad, #09dfff);
@@ -44,7 +44,7 @@ a {
   color: white;
   font-size: 2vw;
   text-transform: uppercase;
-  font-weight: solid;
+  font-width: solid;
   font-family: sans-serif;
 }
 

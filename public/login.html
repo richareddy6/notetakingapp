@@ -4,11 +4,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="style.css" />
     
-    
+    <script src="validate.js">
+    </script>
   </head>
   <body>
     <nav>
-      <ul class="unlist">
+      <ul>
         <li>
           <a href="#"> Home </a>
         </li>
@@ -30,7 +31,7 @@
       <div class="container">
         <label for="uname"><b>Username</b></label>
         <input type="text" name="uname" id="username" required />
-        
+
         <label for="psw"><b>Password</b></label>
         <input type="password" name="psw" id="password" required />
         <div class="name_container">
@@ -40,9 +41,5 @@
         </div>
       </div>
     </form>
-    <button id="users-btn">Get Users</button>
-    <ul id="allUsers"></ul>
-    <script src="validate.js">
-    </script>
   </body>
 </html>
