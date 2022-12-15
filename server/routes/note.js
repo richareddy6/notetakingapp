@@ -55,6 +55,15 @@ router
       res.status(401).send({message: err.message})
     }
   })
+  .post('/create', async (req, res) => {
+    try {
+      let note = await Note.createNote(req.body);
+      res.send({success: "Successfully inserted "});
+    } catch(err) {
+      res.status(401).send({message: err.message})
+    }
+  })
+
 
 
 

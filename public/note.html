@@ -3,31 +3,33 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="style.css" />
+    
+    <script src="validate.js">
+    </script>
   </head>
   <body>
-    <form action="#" onsubmit="getNoteData();return false" > 
-      <nav>
-        <ul>
-          <li>
-            <a href="#"> Home </a>
-          </li>
-          <li>
-            <a href="login.html"> Login </a>
-          </li>
-          <li>
-            <a href="register.html"> Register </a>
-          </li>
-          <li>
-            <a href="note.html"> Notes </a>
-          </li>
-        </ul>
-      </nav>
-      <div class="container">
-        <h1>Notes</h1>
-        <p>You can enter your notes</p>
-        <hr />
+    <nav>
+      <ul>
+        <li>
+          <a href="#"> Home </a>
+        </li>
+        <li>
+          <a href="login.html"> Login </a>
+        </li>
+        <li>
+          <a href="register.html"> Register </a>
+        </li>
+        <li>
+          <a href="note.html"> Notes </a>
+        </li>
+      </ul>
+    </nav>
 
-        <label for="last_name"><b>Note</b></label>
+    <form action="#" onsubmit="getNoteData();return false" > 
+      <h1>Notes</h1>
+      <p>You can enter your notes</p>
+      <hr />
+      <label for="last_name"><b>Note</b></label>
         <input
           type="text"
           placeholder="Enter your note"
@@ -36,10 +38,7 @@
           required
         />
 
-        <button type="submit" class="registerbtn" >Submit</button>
-      </div>
+        <button type="submit" class="registerbtn" style="width:90%">Submit</button>
     </form>
-    <script src="validate.js">
-    </script>
   </body>
 </html>

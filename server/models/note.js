@@ -57,6 +57,14 @@ async function editNotes(note) {
   return updatedNote[0];
 }
 
+async function createNote(note) {
+  console.log("Inside note model")
+  const sql = `INSERT INTO notes (user_id,noteContent)
+    VALUES ("${note.userID}","${note.note}");
+  `
+  await con.query(sql);
+}
+
 // Delete Note function
 async function deleteNote(note) {
   let sql = `DELETE FROM notes
@@ -83,4 +91,4 @@ async function getNote(note) {
   return await con.query(sql);  
 }
 
-module.exports = { getAllNotes,getNote, Read, editNotes, deleteNote};
+module.exports = { getAllNotes,getNote, Read, editNotes, deleteNote,createNote};

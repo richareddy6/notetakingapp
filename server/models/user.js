@@ -48,11 +48,12 @@ async function getAllUsers() {
 
 // Create  User - Registering
 async function register(user) {
+  console.log("Inside register model")
   let cUser = await getUser(user);
   if(cUser.length > 0) throw Error("Username already in use");
 
-  const sql = `INSERT INTO users (username, password)
-    VALUES ("${user.username}", "${user.password}");
+  const sql = `INSERT INTO users (username,firstname,lastname, user_password)
+    VALUES ("${user.username}","${user.firstname}","${user.lastname}", "${user.password}");
   `
   await con.query(sql);
   return await login(user);
@@ -61,9 +62,9 @@ async function register(user) {
 // Read User -- login user
 async function login(user) { // {userName: "sda", password: "gsdhjsga"}
   let cUser = await getUser(user); //[{userName: "cathy123", password: "icecream"}]
-  
+  console.log(cUser,"Inside login model")
   if(!cUser[0]) throw Error("Username not found");
-  if(cUser[0].password !== user.password) throw Error("Password incorrect");
+  if(cUser[0].user_password !== user.password) throw Error("Password incorrect");
 
   return cUser[0];
 }
@@ -100,7 +101,7 @@ async function getUser(user) {
   } else {
     sql = `
     SELECT * FROM users 
-      WHERE userName = "${user.username}"
+      WHERE username = "${user.username}"
   `;
   }
   return await con.query(sql);  
